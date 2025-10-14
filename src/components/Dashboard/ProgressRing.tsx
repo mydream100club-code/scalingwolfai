@@ -83,7 +83,7 @@ const ProgressRing: React.FC<ProgressRingProps> = ({
         
         {/* Center content with enhanced styling */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-4xl font-bold text-white drop-shadow-lg">
+          <span className="text-4xl font-bold text-gray-900 dark:text-white drop-shadow-lg">
             {percentage}%
           </span>
           <div 

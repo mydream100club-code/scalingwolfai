@@ -263,11 +263,11 @@ const CashOut: React.FC = () => {
 
         {/* Enhanced Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-rose-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-rose-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Expenses</p>
-                <p className="text-3xl font-bold text-white mt-1">{expenses.length}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Expenses</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{expenses.length}</p>
                 <p className="text-xs text-rose-400 mt-1 flex items-center">
                   <TrendingUp className="h-3 w-3 mr-1" />
                   All recorded expenses
@@ -279,11 +279,11 @@ const CashOut: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-red-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-red-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Amount</p>
-                <p className="text-2xl font-bold text-white mt-1">{formatCurrency(financialTotals.totalAmount)}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Amount</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(financialTotals.totalAmount)}</p>
                 <p className="text-xs text-red-400 mt-1 flex items-center">
                   <DollarSign className="h-3 w-3 mr-1" />
                   Total cash out
@@ -295,11 +295,11 @@ const CashOut: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-green-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Invoices Filed</p>
-                <p className="text-3xl font-bold text-white mt-1">{financialTotals.filedInvoices}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Invoices Filed</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{financialTotals.filedInvoices}</p>
                 <p className="text-xs text-green-400 mt-1 flex items-center">
                   <CheckSquare className="h-3 w-3 mr-1" />
                   For accounting
@@ -311,10 +311,10 @@ const CashOut: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-yellow-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-yellow-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Invoices Pending</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Invoices Pending</p>
                 <p className="text-3xl font-bold text-yellow-400 mt-1">{financialTotals.unfiledInvoices}</p>
                 <p className="text-xs text-yellow-400 mt-1 flex items-center">
                   <Square className="h-3 w-3 mr-1" />
@@ -329,11 +329,11 @@ const CashOut: React.FC = () => {
         </div>
 
         {/* Enhanced Filters */}
-        <div className="glass-card p-6 hover:bg-gray-800/40 transition-all duration-300">
+        <div className="glass-card p-6">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
             {/* Search */}
             <div className="relative group">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-hover:text-gray-300 transition-colors" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-600 dark:text-gray-400 transition-colors" />
               <input
                 type="text"
                 placeholder="Search expenses..."

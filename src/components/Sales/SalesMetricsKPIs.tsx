@@ -55,11 +55,11 @@ const SalesMetricsKPIs: React.FC<SalesMetricsKPIsProps> = ({
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+      <div className="glass-card p-6 group">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Deals</p>
-            <p className="text-3xl font-bold text-white mt-1">{currentMetrics.totalDeals}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Deals</p>
+            <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{currentMetrics.totalDeals}</p>
             <div className="flex items-center space-x-1 mt-2">
               {getTrendIcon(calculatePercentageChange(currentMetrics.totalDeals, previousMetrics.totalDeals))}
               <span className={`text-sm font-medium ${getTrendColor(calculatePercentageChange(currentMetrics.totalDeals, previousMetrics.totalDeals))}`}>
@@ -73,11 +73,11 @@ const SalesMetricsKPIs: React.FC<SalesMetricsKPIsProps> = ({
         </div>
       </div>
 
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+      <div className="glass-card p-6 group">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Pipeline Value</p>
-            <p className="text-2xl font-bold text-white mt-1">{formatCurrency(currentMetrics.totalValue)}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Pipeline Value</p>
+            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(currentMetrics.totalValue)}</p>
             <div className="flex items-center space-x-1 mt-2">
               {getTrendIcon(calculatePercentageChange(currentMetrics.totalValue, previousMetrics.totalValue))}
               <span className={`text-sm font-medium ${getTrendColor(calculatePercentageChange(currentMetrics.totalValue, previousMetrics.totalValue))}`}>
@@ -91,10 +91,10 @@ const SalesMetricsKPIs: React.FC<SalesMetricsKPIsProps> = ({
         </div>
       </div>
 
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+      <div className="glass-card p-6 group">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Weighted Value</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Weighted Value</p>
             <p className="text-2xl font-bold text-green-400 mt-1">{formatCurrency(currentMetrics.weightedValue)}</p>
             <div className="flex items-center space-x-1 mt-2">
               {getTrendIcon(calculatePercentageChange(currentMetrics.weightedValue, previousMetrics.weightedValue))}
@@ -109,10 +109,10 @@ const SalesMetricsKPIs: React.FC<SalesMetricsKPIsProps> = ({
         </div>
       </div>
 
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+      <div className="glass-card p-6 group">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Won Value</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Won Value</p>
             <p className="text-2xl font-bold text-emerald-400 mt-1">{formatCurrency(currentMetrics.wonValue)}</p>
             <div className="flex items-center space-x-1 mt-2">
               <Award className="h-4 w-4 text-emerald-400" />
@@ -127,10 +127,10 @@ const SalesMetricsKPIs: React.FC<SalesMetricsKPIsProps> = ({
         </div>
       </div>
 
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+      <div className="glass-card p-6 group">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Win Rate</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Win Rate</p>
             <p className="text-3xl font-bold text-yellow-400 mt-1">
               {currentMetrics.conversionRate.toFixed(1)}%
             </p>

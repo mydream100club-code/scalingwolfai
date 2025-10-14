@@ -508,11 +508,11 @@ const LeadMetrics: React.FC = () => {
 
       {/* Key Performance Indicators */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+        <div className="glass-card p-6 group">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Leads</p>
-              <p className="text-3xl font-bold text-white mt-1">{currentMetrics.totalLeads}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Leads</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{currentMetrics.totalLeads}</p>
               <div className="flex items-center space-x-1 mt-2">
                 {getTrendIcon(calculatePercentageChange(currentMetrics.totalLeads, previousMetrics.totalLeads))}
                 <span className={`text-sm font-medium ${getTrendColor(calculatePercentageChange(currentMetrics.totalLeads, previousMetrics.totalLeads))}`}>
@@ -526,11 +526,11 @@ const LeadMetrics: React.FC = () => {
           </div>
         </div>
 
-        <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+        <div className="glass-card p-6 group">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Conversion Rate</p>
-              <p className="text-3xl font-bold text-white mt-1">
+              <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Conversion Rate</p>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">
                 {currentMetrics.totalLeads > 0 ? ((currentMetrics.closedWon / currentMetrics.totalLeads) * 100).toFixed(1) : 0}%
               </p>
               <div className="flex items-center space-x-1 mt-2">
@@ -546,11 +546,11 @@ const LeadMetrics: React.FC = () => {
           </div>
         </div>
 
-        <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+        <div className="glass-card p-6 group">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Revenue Generated</p>
-              <p className="text-2xl font-bold text-white mt-1">{formatCurrency(currentMetrics.revenueGenerated)}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Revenue Generated</p>
+              <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(currentMetrics.revenueGenerated)}</p>
               <div className="flex items-center space-x-1 mt-2">
                 {getTrendIcon(calculatePercentageChange(currentMetrics.revenueGenerated, previousMetrics.revenueGenerated))}
                 <span className={`text-sm font-medium ${getTrendColor(calculatePercentageChange(currentMetrics.revenueGenerated, previousMetrics.revenueGenerated))}`}>
@@ -564,10 +564,10 @@ const LeadMetrics: React.FC = () => {
           </div>
         </div>
 
-        <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105">
+        <div className="glass-card p-6 group">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Cash Collected</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Cash Collected</p>
               <p className="text-2xl font-bold text-green-400 mt-1">{formatCurrency(currentMetrics.cashCollected)}</p>
               <div className="flex items-center space-x-1 mt-2">
                 <span className="text-sm text-gray-400">

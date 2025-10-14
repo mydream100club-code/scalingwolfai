@@ -47,11 +47,11 @@ const FinancialKPICards: React.FC<FinancialKPICardsProps> = ({
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
       {/* Total Income */}
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
+      <div className="glass-card p-6 group hover:shadow-xl hover:shadow-green-500/10">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Income</p>
-            <p className="text-2xl font-bold text-white mt-1">{formatCurrency(currentMetrics.totalIncome)}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Income</p>
+            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(currentMetrics.totalIncome)}</p>
             <div className="flex items-center space-x-1 mt-2">
               {getTrendIcon(calculatePercentageChange(currentMetrics.totalIncome, previousMetrics.totalIncome))}
               <span className={`text-sm font-medium ${getTrendColor(calculatePercentageChange(currentMetrics.totalIncome, previousMetrics.totalIncome))}`}>
@@ -66,11 +66,11 @@ const FinancialKPICards: React.FC<FinancialKPICardsProps> = ({
       </div>
 
       {/* Total Expenses */}
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-red-500/10">
+      <div className="glass-card p-6 group hover:shadow-xl hover:shadow-red-500/10">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Expenses</p>
-            <p className="text-2xl font-bold text-white mt-1">{formatCurrency(currentMetrics.totalExpenses)}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Expenses</p>
+            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(currentMetrics.totalExpenses)}</p>
             <div className="flex items-center space-x-1 mt-2">
               {getTrendIcon(calculatePercentageChange(currentMetrics.totalExpenses, previousMetrics.totalExpenses))}
               <span className={`text-sm font-medium ${getTrendColor(calculatePercentageChange(currentMetrics.totalExpenses, previousMetrics.totalExpenses))}`}>
@@ -85,10 +85,10 @@ const FinancialKPICards: React.FC<FinancialKPICardsProps> = ({
       </div>
 
       {/* Net Profit */}
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-amber-500/10">
+      <div className="glass-card p-6 group hover:shadow-xl hover:shadow-amber-500/10">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Net Profit</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Net Profit</p>
             <p className={`text-2xl font-bold mt-1 ${currentMetrics.netProfit >= 0 ? 'text-amber-400' : 'text-red-400'}`}>
               {formatCurrency(currentMetrics.netProfit)}
             </p>
@@ -106,11 +106,11 @@ const FinancialKPICards: React.FC<FinancialKPICardsProps> = ({
       </div>
 
       {/* Total Commissions */}
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10">
+      <div className="glass-card p-6 group hover:shadow-xl hover:shadow-blue-500/10">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Commissions</p>
-            <p className="text-2xl font-bold text-white mt-1">{formatCurrency(currentMetrics.totalCommissions)}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Commissions</p>
+            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(currentMetrics.totalCommissions)}</p>
             <div className="flex items-center space-x-1 mt-2">
               <Target className="h-4 w-4 text-blue-400" />
               <span className="text-sm text-blue-400 font-medium">
@@ -125,10 +125,10 @@ const FinancialKPICards: React.FC<FinancialKPICardsProps> = ({
       </div>
 
       {/* Overdue Receivables */}
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-red-500/10">
+      <div className="glass-card p-6 group hover:shadow-xl hover:shadow-red-500/10">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Overdue Receivables</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Overdue Receivables</p>
             <p className="text-2xl font-bold text-red-400 mt-1">{formatCurrency(currentMetrics.overdueReceivables)}</p>
             <div className="flex items-center space-x-1 mt-2">
               <AlertTriangle className="h-4 w-4 text-red-400" />
@@ -144,10 +144,10 @@ const FinancialKPICards: React.FC<FinancialKPICardsProps> = ({
       </div>
 
       {/* Collection Rate */}
-      <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10">
+      <div className="glass-card p-6 group hover:shadow-xl hover:shadow-cyan-500/10">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Collection Rate</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Collection Rate</p>
             <p className="text-2xl font-bold text-cyan-400 mt-1">{currentMetrics.collectionRate.toFixed(1)}%</p>
             <div className="flex items-center space-x-1 mt-2">
               <CheckCircle className="h-4 w-4 text-cyan-400" />

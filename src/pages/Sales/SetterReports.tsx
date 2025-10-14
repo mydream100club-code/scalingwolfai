@@ -157,11 +157,11 @@ const SetterReports: React.FC = () => {
 
         {/* Today's Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-orange-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-orange-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Reports Today</p>
-                <p className="text-3xl font-bold text-white mt-1">{todayMetrics.totalReports}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Reports Today</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{todayMetrics.totalReports}</p>
                 <p className="text-xs text-orange-400 mt-1 flex items-center">
                   <Users className="h-3 w-3 mr-1" />
                   Team submissions
@@ -173,11 +173,11 @@ const SetterReports: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-blue-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">New Leads</p>
-                <p className="text-3xl font-bold text-white mt-1">{todayMetrics.totalLeads}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">New Leads</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{todayMetrics.totalLeads}</p>
                 <p className="text-xs text-blue-400 mt-1 flex items-center">
                   <Sparkles className="h-3 w-3 mr-1" />
                   Fresh prospects
@@ -189,11 +189,11 @@ const SetterReports: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-green-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Calls Made</p>
-                <p className="text-3xl font-bold text-white mt-1">{todayMetrics.totalCalls}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Calls Made</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{todayMetrics.totalCalls}</p>
                 <p className="text-xs text-green-400 mt-1 flex items-center">
                   <Phone className="h-3 w-3 mr-1" />
                   Outreach activity
@@ -205,11 +205,11 @@ const SetterReports: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-purple-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Appointments</p>
-                <p className="text-3xl font-bold text-white mt-1">{todayMetrics.totalAppointments}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Appointments</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{todayMetrics.totalAppointments}</p>
                 <p className="text-xs text-purple-400 mt-1 flex items-center">
                   <Calendar className="h-3 w-3 mr-1" />
                   Booked today
@@ -221,11 +221,11 @@ const SetterReports: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-cyan-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">LinkedIn</p>
-                <p className="text-3xl font-bold text-white mt-1">{todayMetrics.totalLinkedInConnections}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">LinkedIn</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{todayMetrics.totalLinkedInConnections}</p>
                 <p className="text-xs text-cyan-400 mt-1 flex items-center">
                   <Users className="h-3 w-3 mr-1" />
                   Connections
@@ -237,11 +237,11 @@ const SetterReports: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-yellow-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-yellow-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Looms Sent</p>
-                <p className="text-3xl font-bold text-white mt-1">{todayMetrics.totalLoomsSent}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Looms Sent</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{todayMetrics.totalLoomsSent}</p>
                 <p className="text-xs text-yellow-400 mt-1 flex items-center">
                   <Target className="h-3 w-3 mr-1" />
                   Video explanations
@@ -331,7 +331,7 @@ const SetterReports: React.FC = () => {
                         <div className="font-semibold text-white group-hover:text-orange-100 transition-colors">
                           {report.setter_name}
                         </div>
-                        <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                        <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">
                           {report.submitter?.email}
                         </div>
                       </div>

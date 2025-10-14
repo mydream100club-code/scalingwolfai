@@ -368,11 +368,11 @@ const LeadsCRM: React.FC = () => {
 
         {/* Enhanced Stats with Financial Data */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-teal-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-teal-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Leads</p>
-                <p className="text-3xl font-bold text-white mt-1">{leads.length}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Leads</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{leads.length}</p>
                 <p className="text-xs text-teal-400 mt-1 flex items-center">
                   <TrendingUp className="h-3 w-3 mr-1" />
                   Active pipeline
@@ -384,11 +384,11 @@ const LeadsCRM: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-blue-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">New Leads</p>
-                <p className="text-3xl font-bold text-white mt-1">
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">New Leads</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">
                   {leads.filter(lead => lead.status === 'new').length}
                 </p>
                 <p className="text-xs text-blue-400 mt-1 flex items-center">
@@ -404,11 +404,11 @@ const LeadsCRM: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-green-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Qualified</p>
-                <p className="text-3xl font-bold text-white mt-1">
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Qualified</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">
                   {leads.filter(lead => lead.status === 'qualified').length}
                 </p>
                 <p className="text-xs text-green-400 mt-1 flex items-center">
@@ -424,11 +424,11 @@ const LeadsCRM: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-emerald-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Revenue</p>
-                <p className="text-2xl font-bold text-white mt-1">
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Revenue</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
                   ${financialTotals.totalRevenue.toLocaleString()}
                 </p>
                 <p className="text-xs text-emerald-400 mt-1 flex items-center">
@@ -442,10 +442,10 @@ const LeadsCRM: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-green-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Cash Collected</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Cash Collected</p>
                 <p className="text-2xl font-bold text-green-400 mt-1">
                   ${financialTotals.totalCashCollected.toLocaleString()}
                 </p>
@@ -464,11 +464,11 @@ const LeadsCRM: React.FC = () => {
         </div>
 
         {/* Enhanced Filters */}
-        <div className="glass-card p-6 hover:bg-gray-800/40 transition-all duration-300">
+        <div className="glass-card p-6">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
             {/* Search */}
             <div className="relative group">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-hover:text-gray-300 transition-colors" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-600 dark:text-gray-400 transition-colors" />
               <input
                 type="text"
                 placeholder="Search leads..."
@@ -603,7 +603,7 @@ const LeadsCRM: React.FC = () => {
                         <div className="font-semibold text-white group-hover:text-teal-100 transition-colors">
                           {lead.first_name} {lead.last_name}
                         </div>
-                        <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">{lead.email}</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">{lead.email}</div>
                         {lead.company && (
                           <div className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors">{lead.company}</div>
                         )}

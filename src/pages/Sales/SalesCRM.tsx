@@ -276,11 +276,11 @@ const SalesCRM: React.FC = () => {
 
         {/* Enhanced Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-emerald-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Deals</p>
-                <p className="text-3xl font-bold text-white mt-1">{deals.length}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Deals</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{deals.length}</p>
                 <p className="text-xs text-emerald-400 mt-1 flex items-center">
                   <TrendingUp className="h-3 w-3 mr-1" />
                   Active pipeline
@@ -292,11 +292,11 @@ const SalesCRM: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-blue-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Pipeline Value</p>
-                <p className="text-2xl font-bold text-white mt-1">{formatCurrency(financialTotals.totalValue)}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Pipeline Value</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(financialTotals.totalValue)}</p>
                 <p className="text-xs text-blue-400 mt-1 flex items-center">
                   <DollarSign className="h-3 w-3 mr-1" />
                   Total potential
@@ -308,10 +308,10 @@ const SalesCRM: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-green-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Weighted Value</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Weighted Value</p>
                 <p className="text-2xl font-bold text-green-400 mt-1">{formatCurrency(financialTotals.weightedValue)}</p>
                 <p className="text-xs text-green-400 mt-1 flex items-center">
                   <Target className="h-3 w-3 mr-1" />
@@ -324,10 +324,10 @@ const SalesCRM: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-emerald-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Won Deals</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Won Deals</p>
                 <p className="text-3xl font-bold text-emerald-400 mt-1">{financialTotals.wonCount}</p>
                 <p className="text-xs text-emerald-400 mt-1 flex items-center">
                   <Award className="h-3 w-3 mr-1" />
@@ -340,10 +340,10 @@ const SalesCRM: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-yellow-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-yellow-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Win Rate</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Win Rate</p>
                 <p className="text-3xl font-bold text-yellow-400 mt-1">
                   {deals.length > 0 ? ((financialTotals.wonCount / deals.length) * 100).toFixed(1) : 0}%
                 </p>
@@ -360,11 +360,11 @@ const SalesCRM: React.FC = () => {
         </div>
 
         {/* Enhanced Filters */}
-        <div className="glass-card p-6 hover:bg-gray-800/40 transition-all duration-300">
+        <div className="glass-card p-6">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
             {/* Search */}
             <div className="relative group">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-hover:text-gray-300 transition-colors" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-600 dark:text-gray-400 transition-colors" />
               <input
                 type="text"
                 placeholder="Search deals..."
@@ -502,7 +502,7 @@ const SalesCRM: React.FC = () => {
                           {deal.deal_name}
                         </div>
                         {deal.lead && (
-                          <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                          <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">
                             {deal.lead.first_name} {deal.lead.last_name}
                           </div>
                         )}

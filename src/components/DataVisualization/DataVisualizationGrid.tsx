@@ -39,7 +39,7 @@ const DataVisualizationGrid: React.FC<DataVisualizationGridProps> = ({
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 ${className}`}>
       {/* Neuron Network - Lead Connections */}
-      <div className="glass-card p-6 hover:bg-gray-800/40 transition-all duration-300 group">
+      <div className="glass-card p-6 group">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold gradient-text section-gradient-finances">
             Financial Flow Network
@@ -63,7 +63,7 @@ const DataVisualizationGrid: React.FC<DataVisualizationGridProps> = ({
       </div>
 
       {/* Spider Web - Performance Metrics */}
-      <div className="glass-card p-6 hover:bg-gray-800/40 transition-all duration-300 group">
+      <div className="glass-card p-6 group">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold gradient-text section-gradient-leads">
             Performance Radar
@@ -90,7 +90,7 @@ const DataVisualizationGrid: React.FC<DataVisualizationGridProps> = ({
       </div>
 
       {/* Funnel Flow - Conversion Pipeline */}
-      <div className="glass-card p-6 hover:bg-gray-800/40 transition-all duration-300 group lg:col-span-2 xl:col-span-1">
+      <div className="glass-card p-6 group lg:col-span-2 xl:col-span-1">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold gradient-text section-gradient-leads">
             Conversion Flow

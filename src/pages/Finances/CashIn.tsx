@@ -275,11 +275,11 @@ const CashIn: React.FC = () => {
 
         {/* Enhanced Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-rose-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-rose-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Entries</p>
-                <p className="text-3xl font-bold text-white mt-1">{cashEntries.length}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Entries</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{cashEntries.length}</p>
                 <p className="text-xs text-rose-400 mt-1 flex items-center">
                   <TrendingUp className="h-3 w-3 mr-1" />
                   All transactions
@@ -291,11 +291,11 @@ const CashIn: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-green-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Income</p>
-                <p className="text-2xl font-bold text-white mt-1">{formatCurrency(financialTotals.totalIncome)}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Income</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(financialTotals.totalIncome)}</p>
                 <p className="text-xs text-green-400 mt-1 flex items-center">
                   <DollarSign className="h-3 w-3 mr-1" />
                   Revenue received
@@ -307,10 +307,10 @@ const CashIn: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-emerald-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Gross Profit</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Gross Profit</p>
                 <p className="text-2xl font-bold text-emerald-400 mt-1">{formatCurrency(financialTotals.totalGrossProfit)}</p>
                 <p className="text-xs text-emerald-400 mt-1 flex items-center">
                   <Target className="h-3 w-3 mr-1" />
@@ -323,10 +323,10 @@ const CashIn: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-blue-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Commissions</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Commissions</p>
                 <p className="text-2xl font-bold text-blue-400 mt-1">{formatCurrency(financialTotals.totalCommissions)}</p>
                 <p className="text-xs text-blue-400 mt-1 flex items-center">
                   <Percent className="h-3 w-3 mr-1" />
@@ -339,10 +339,10 @@ const CashIn: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-amber-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-amber-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Net Profit</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Net Profit</p>
                 <p className="text-2xl font-bold text-amber-400 mt-1">
                   {formatCurrency(financialTotals.totalGrossProfit - financialTotals.totalCommissions)}
                 </p>
@@ -359,11 +359,11 @@ const CashIn: React.FC = () => {
         </div>
 
         {/* Enhanced Filters */}
-        <div className="glass-card p-6 hover:bg-gray-800/40 transition-all duration-300">
+        <div className="glass-card p-6">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
             {/* Search */}
             <div className="relative group">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-hover:text-gray-300 transition-colors" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-600 dark:text-gray-400 transition-colors" />
               <input
                 type="text"
                 placeholder="Search entries..."
@@ -543,7 +543,7 @@ const CashIn: React.FC = () => {
                         <div className="font-semibold text-white group-hover:text-rose-100 transition-colors">
                           {entry.client_name}
                         </div>
-                        <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                        <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">
                           {entry.client_email}
                         </div>
                       </div>

@@ -397,11 +397,11 @@ const Proposals: React.FC = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-purple-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Proposals</p>
-                <p className="text-3xl font-bold text-white mt-1">{proposals.length}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Proposals</p>
+                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{proposals.length}</p>
                 <p className="text-xs text-purple-400 mt-1 flex items-center">
                   <FileText className="h-3 w-3 mr-1" />
                   All proposals
@@ -413,11 +413,11 @@ const Proposals: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-blue-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Total Value</p>
-                <p className="text-2xl font-bold text-white mt-1">{formatCurrency(financialTotals.totalValue)}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Total Value</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{formatCurrency(financialTotals.totalValue)}</p>
                 <p className="text-xs text-blue-400 mt-1 flex items-center">
                   <DollarSign className="h-3 w-3 mr-1" />
                   Proposed value
@@ -429,10 +429,10 @@ const Proposals: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-yellow-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-yellow-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Sent Value</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Sent Value</p>
                 <p className="text-2xl font-bold text-yellow-400 mt-1">{formatCurrency(financialTotals.sentValue)}</p>
                 <p className="text-xs text-yellow-400 mt-1 flex items-center">
                   <Mail className="h-3 w-3 mr-1" />
@@ -445,10 +445,10 @@ const Proposals: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-green-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-green-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Accepted Value</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Accepted Value</p>
                 <p className="text-2xl font-bold text-green-400 mt-1">{formatCurrency(financialTotals.acceptedValue)}</p>
                 <p className="text-xs text-green-400 mt-1 flex items-center">
                   <Award className="h-3 w-3 mr-1" />
@@ -461,10 +461,10 @@ const Proposals: React.FC = () => {
             </div>
           </div>
 
-          <div className="glass-card p-6 hover:bg-gray-800/60 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-red-500/10">
+          <div className="glass-card p-6 group hover:shadow-xl hover:shadow-red-500/10">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Rejected Value</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Rejected Value</p>
                 <p className="text-2xl font-bold text-red-400 mt-1">{formatCurrency(financialTotals.rejectedValue)}</p>
                 <p className="text-xs text-red-400 mt-1 flex items-center">
                   <Target className="h-3 w-3 mr-1" />
@@ -604,7 +604,7 @@ const Proposals: React.FC = () => {
                             {proposal.title}
                           </div>
                           {proposal.deal && (
-                            <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                            <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">
                               {proposal.deal.deal_name}
                             </div>
                           )}

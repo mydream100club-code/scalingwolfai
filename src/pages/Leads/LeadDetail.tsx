@@ -275,7 +275,7 @@ const LeadDetail: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-4 bg-gray-800/30 rounded-lg">
                 <p className="text-sm text-gray-400">Revenue Generated</p>
-                <p className="text-2xl font-bold text-white mt-1">
+                <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
                   ${lead.revenue_generated?.toFixed(2) || '0.00'}
                 </p>
               </div>
