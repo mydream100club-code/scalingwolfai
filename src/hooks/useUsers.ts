@@ -12,9 +12,7 @@ export interface UserProfile {
   updated_at: string;
 }
 
-/**
- * Hook for managing users table data - SEPARATE from AuthContext
- */
+
 export const useUsers = () => {
   const [users, setUsers] = useState<UserProfile[]>([]);
   const [loading, setLoading] = useState(false);
@@ -130,3 +128,6 @@ export const useUserProfile = (userId: string | null) => {
 
   return { profile, loading, error };
 };
+
+
+
