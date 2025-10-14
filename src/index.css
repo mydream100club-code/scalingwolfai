@@ -80,23 +80,14 @@
 @layer components {
   /* Card Components */
   .card {
-    @apply rounded-2xl border bg-white dark:bg-neutral-900 transition-all duration-200;
+    @apply rounded-2xl border bg-white dark:bg-neutral-900;
     border-color: rgb(var(--color-border));
     box-shadow: var(--shadow-sm);
-  }
-
-  .card:hover {
-    border-color: rgb(var(--color-border-hover));
-    box-shadow: var(--shadow-md);
   }
 
   .card-elevated {
     @apply card;
     box-shadow: var(--shadow-lg);
-  }
-
-  .card-elevated:hover {
-    box-shadow: var(--shadow-xl);
   }
 
   .glass-card {

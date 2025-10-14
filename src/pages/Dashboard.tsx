@@ -17,14 +17,14 @@ const Dashboard: React.FC = () => {
           <h1 className="text-3xl font-bold gradient-text section-gradient-dashboard">
             Dashboard
           </h1>
-          <p className="text-gray-400 mt-2">
+          <p className="text-gray-600 dark:text-gray-400 mt-2">
             Welcome back! Here's what's happening with your agency.
           </p>
         </div>
         <div className="flex items-center space-x-4">
           <div className="text-right">
-            <p className="text-sm text-gray-400">Today</p>
-            <p className="text-lg font-semibold text-white">
+            <p className="text-sm text-gray-600 dark:text-gray-400">Today</p>
+            <p className="text-lg font-semibold text-gray-900 dark:text-white">
               {new Date().toLocaleDateString()}
             </p>
           </div>
@@ -107,11 +107,11 @@ const Dashboard: React.FC = () => {
                 { icon: Calendar, text: "Meeting with design team", time: "6 hours ago", color: "text-purple-400" },
                 { icon: Award, text: "Deal closed with XYZ Inc", time: "1 day ago", color: "text-yellow-400" }
               ].map((activity, index) => (
-                <div key={index} className="flex items-center space-x-4 p-3 bg-gray-800/30 rounded-lg">
+                <div key={index} className="flex items-center space-x-4 p-3 bg-gray-100 dark:bg-gray-800/30 rounded-lg">
                   <activity.icon className={`h-5 w-5 ${activity.color}`} />
                   <div className="flex-1">
-                    <p className="text-sm text-white">{activity.text}</p>
-                    <p className="text-xs text-gray-400">{activity.time}</p>
+                    <p className="text-sm text-gray-900 dark:text-white">{activity.text}</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">{activity.time}</p>
                   </div>
                 </div>
               ))}
