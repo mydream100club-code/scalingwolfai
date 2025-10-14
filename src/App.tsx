@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { AppProvider } from './contexts/AppContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import { Suspense } from 'react';
 import Header from './components/Layout/Header';
 import Sidebar from './components/Layout/Sidebar';
@@ -29,10 +30,10 @@ const AppContent: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-400 mx-auto mb-4"></div>
-          <p className="text-gray-400">Loading...</p>
+          <p className="text-gray-600 dark:text-gray-400">Loading...</p>
         </div>
       </div>
     );
@@ -51,9 +52,10 @@ const AppContent: React.FC = () => {
   }
 
   return (
-    <AppProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-950 text-white font-space-grotesk">
+    <ThemeProvider>
+      <AppProvider>
+        <Router>
+          <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white font-space-grotesk">
           <Header />
           <div className="flex">
             <Sidebar />
@@ -238,9 +240,10 @@ const AppContent: React.FC = () => {
             </main>
           </div>
           <Footer />
-        </div>
-      </Router>
-    </AppProvider>
+          </div>
+        </Router>
+      </AppProvider>
+    </ThemeProvider>
   );
 };
 
