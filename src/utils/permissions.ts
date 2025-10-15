@@ -68,8 +68,11 @@ export const getUserPermissions = (role: UserRole | undefined): Permission => {
     };
   }
 
+  // Normalize role to lowercase for case-insensitive matching
+  const normalizedRole = role.toLowerCase() as UserRole;
+
   // Ensure the role exists in ROLE_PERMISSIONS
-  const permissions = ROLE_PERMISSIONS[role];
+  const permissions = ROLE_PERMISSIONS[normalizedRole];
   if (!permissions) {
     console.warn(`Unknown role: ${role}. Defaulting to no permissions.`);
     return {
