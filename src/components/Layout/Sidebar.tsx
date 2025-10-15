@@ -101,6 +101,17 @@ const Sidebar: React.FC = () => {
   const { hasPermission } = usePermissions(role);
   const location = useLocation();
 
+  // Temporary debug
+  React.useEffect(() => {
+    console.log('=== SIDEBAR DEBUG ===');
+    console.log('Role:', role);
+    console.log('Total menu items:', menuItems.length);
+    menuItems.forEach(item => {
+      const canAccess = hasPermission(item.section as any);
+      console.log(`${item.label} (${item.section}):`, canAccess);
+    });
+  }, [role, hasPermission]);
+
   const toggleSidebar = () => {
     setSidebarCollapsed(!sidebarCollapsed);
   };
