@@ -61,7 +61,23 @@ export const getUserPermissions = (role: UserRole | undefined): Permission => {
       settings: false,
     };
   }
-  return ROLE_PERMISSIONS[role];
+
+  // Ensure the role exists in ROLE_PERMISSIONS
+  const permissions = ROLE_PERMISSIONS[role];
+  if (!permissions) {
+    console.warn(`Unknown role: ${role}. Defaulting to no permissions.`);
+    return {
+      dashboard: false,
+      leads: false,
+      sales: false,
+      documents: false,
+      finances: false,
+      reports: false,
+      settings: false,
+    };
+  }
+
+  return permissions;
 };
 
 export const hasPermission = (
@@ -70,7 +86,8 @@ export const hasPermission = (
 ): boolean => {
   if (!role) return false;
   const permissions = getUserPermissions(role);
-  return permissions[section];
+  if (!permissions) return false;
+  return permissions[section] || false;
 };
 
 export const canAccessSection = (

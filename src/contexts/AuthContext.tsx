@@ -37,8 +37,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Get user role from user_metadata
-  const role = user?.user_metadata?.role as UserRole | undefined;
+  // Get user role from user_metadata, default to 'user' if not set
+  const role = user ? ((user.user_metadata?.role || 'user') as UserRole) : undefined;
 
   useEffect(() => {
     let mounted = true;
