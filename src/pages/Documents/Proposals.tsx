@@ -560,47 +560,47 @@ const Proposals: React.FC = () => {
 
         {/* List View */}
         {viewMode === 'list' && (
-          <div className="glass-card overflow-hidden hover:bg-gray-800/30 transition-all duration-300">
+          <div className="glass-card overflow-hidden hover:bg-gray-100/50 dark:hover:bg-gray-800/30 transition-all duration-300">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gray-800/60 backdrop-blur-sm">
+                <thead className="bg-gray-200/80 dark:bg-gray-800/60 backdrop-blur-sm">
                   <tr>
                     <th className="px-6 py-4 text-left">
                       <input
                         type="checkbox"
                         checked={selectedProposals.length === paginatedProposals.length && paginatedProposals.length > 0}
                         onChange={handleSelectAll}
-                        className="rounded border-gray-600 bg-gray-700 text-purple-500 focus:ring-purple-500 hover:scale-110 transition-transform duration-200"
+                        className="rounded border-gray-400 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-purple-500 focus:ring-purple-500 hover:scale-110 transition-transform duration-200"
                       />
                     </th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Title</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Status</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Client</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Value</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Created</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Sent</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Follow-ups</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Proposal Link</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Actions</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Title</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Status</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Client</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Value</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Created</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Sent</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Follow-ups</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Proposal Link</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-800/50">
+                <tbody className="divide-y divide-gray-200 dark:divide-gray-800/50">
                   {paginatedProposals.map((proposal) => (
                     <tr 
                       key={proposal.id} 
-                      className="hover:bg-gray-800/40 transition-all duration-300 group hover:shadow-lg hover:shadow-gray-900/20"
+                      className="hover:bg-gray-100/70 dark:hover:bg-gray-800/40 transition-all duration-300 group hover:shadow-lg hover:shadow-gray-300/30 dark:hover:shadow-gray-900/20"
                     >
                       <td className="px-6 py-5">
                         <input
                           type="checkbox"
                           checked={selectedProposals.includes(proposal.id)}
                           onChange={() => handleSelectProposal(proposal.id)}
-                          className="rounded border-gray-600 bg-gray-700 text-purple-500 focus:ring-purple-500 hover:scale-110 transition-transform duration-200"
+                          className="rounded border-gray-400 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-purple-500 focus:ring-purple-500 hover:scale-110 transition-transform duration-200"
                         />
                       </td>
                       <td className="px-6 py-5">
                         <div className="group-hover:scale-105 transition-transform duration-200">
-                          <div className="font-semibold text-white group-hover:text-purple-100 transition-colors">
+                          <div className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-100 transition-colors">
                             {proposal.title}
                           </div>
                           {proposal.deal && (

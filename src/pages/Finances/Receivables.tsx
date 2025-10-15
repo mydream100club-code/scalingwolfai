@@ -538,7 +538,7 @@ const Receivables: React.FC = () => {
                 {paginatedEntries.map((entry) => (
                   <tr 
                     key={entry.id} 
-                    className={`hover:bg-gray-800/40 transition-all duration-300 group hover:shadow-lg hover:shadow-gray-900/20 ${
+                    className={`hover:bg-gray-100/70 dark:hover:bg-gray-800/40 transition-all duration-300 group hover:shadow-lg hover:shadow-gray-300/30 dark:hover:shadow-gray-900/20 ${
                       isOverdue(entry.due_date, entry.status) ? 'bg-red-900/10 border-l-4 border-red-500' : ''
                     }`}
                   >

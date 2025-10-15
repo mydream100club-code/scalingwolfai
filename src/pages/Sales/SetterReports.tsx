@@ -307,28 +307,28 @@ const SetterReports: React.FC = () => {
 
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-800/60 backdrop-blur-sm">
+              <thead className="bg-gray-200/80 dark:bg-gray-800/60 backdrop-blur-sm">
                 <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Setter</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Role</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Leads</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Calls</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Appointments</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">LinkedIn</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Looms</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Date</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Actions</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Setter</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Role</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Leads</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Calls</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Appointments</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">LinkedIn</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Looms</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Date</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-800/50">
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-800/50">
                 {paginatedReports.map((report) => (
                   <tr 
                     key={report.id} 
-                    className="hover:bg-gray-800/40 transition-all duration-300 group hover:shadow-lg hover:shadow-gray-900/20"
+                    className="hover:bg-gray-100/70 dark:hover:bg-gray-800/40 transition-all duration-300 group hover:shadow-lg hover:shadow-gray-300/30 dark:hover:shadow-gray-900/20"
                   >
                     <td className="px-6 py-5">
                       <div className="group-hover:scale-105 transition-transform duration-200">
-                        <div className="font-semibold text-white group-hover:text-orange-100 transition-colors">
+                        <div className="font-semibold text-gray-900 dark:text-white group-hover:text-orange-700 dark:group-hover:text-orange-100 transition-colors">
                           {report.setter_name}
                         </div>
                         <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">
@@ -336,7 +336,7 @@ const SetterReports: React.FC = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="px-6 py-5 text-gray-300 group-hover:text-white transition-colors">
+                    <td className="px-6 py-5 text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                       {report.setter_role}
                     </td>
                     <td className="px-6 py-5">

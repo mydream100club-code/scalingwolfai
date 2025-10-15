@@ -94,7 +94,7 @@ const SalesMetricsTable: React.FC<SalesMetricsTableProps> = ({
 
   return (
     <div className="glass-card overflow-hidden">
-      <div className="p-6 border-b border-gray-700">
+      <div className="p-6 border-b border-gray-300 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold gradient-text section-gradient-sales">
             Sales Pipeline Metrics - {periods.find(p => p.key === selectedPeriod)?.label}
@@ -103,7 +103,7 @@ const SalesMetricsTable: React.FC<SalesMetricsTableProps> = ({
             <span className="text-sm text-gray-400">
               vs {periods.find(p => p.key === selectedPeriod)?.previousLabel}
             </span>
-            <button className="flex items-center space-x-2 px-3 py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
+            <button className="flex items-center space-x-2 px-3 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-colors">
               <Download className="h-4 w-4" />
               <span>Export</span>
             </button>
@@ -113,17 +113,17 @@ const SalesMetricsTable: React.FC<SalesMetricsTableProps> = ({
 
       <div className="overflow-x-auto">
         <table className="w-full">
-          <thead className="bg-gray-800/60">
+          <thead className="bg-gray-200/80 dark:bg-gray-800/60">
             <tr>
-              <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300">Pipeline Stage</th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-300">Current</th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-300">Previous</th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-300">Change</th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-300">Conversion Rate</th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-300">Drop-off</th>
+              <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Pipeline Stage</th>
+              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-700 dark:text-gray-300">Current</th>
+              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-700 dark:text-gray-300">Previous</th>
+              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-700 dark:text-gray-300">Change</th>
+              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-700 dark:text-gray-300">Conversion Rate</th>
+              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-700 dark:text-gray-300">Drop-off</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-800/50">
+          <tbody className="divide-y divide-gray-200 dark:divide-gray-800/50">
             {pipelineStages.map((stage, index) => {
               const currentValue = currentMetrics[stage.key as keyof PipelineMetrics] as number;
               const previousValue = previousMetrics[stage.key as keyof PipelineMetrics] as number;
@@ -141,13 +141,13 @@ const SalesMetricsTable: React.FC<SalesMetricsTableProps> = ({
                 0;
 
               return (
-                <tr key={stage.key} className="hover:bg-gray-800/30 transition-colors group">
+                <tr key={stage.key} className="hover:bg-gray-100/70 dark:hover:bg-gray-800/30 transition-colors group">
                   <td className="px-6 py-4">
                     <div className="flex items-center space-x-3">
-                      <div className={`p-2 bg-gray-800/50 rounded-lg group-hover:scale-110 transition-transform duration-200`}>
+                      <div className={`p-2 bg-gray-100 dark:bg-gray-800/50 rounded-lg group-hover:scale-110 transition-transform duration-200`}>
                         <stage.icon className={`h-5 w-5 ${stage.color}`} />
                       </div>
-                      <span className="font-medium text-white group-hover:text-gray-100 transition-colors">
+                      <span className="font-medium text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-100 transition-colors">
                         {stage.label}
                       </span>
                     </div>

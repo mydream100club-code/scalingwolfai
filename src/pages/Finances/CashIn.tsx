@@ -480,48 +480,48 @@ const CashIn: React.FC = () => {
         )}
 
         {/* Enhanced Cash Entries Table */}
-        <div className="glass-card overflow-hidden hover:bg-gray-800/30 transition-all duration-300">
+        <div className="glass-card overflow-hidden hover:bg-gray-100/50 dark:hover:bg-gray-800/30 transition-all duration-300">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-800/60 backdrop-blur-sm">
+              <thead className="bg-gray-200/80 dark:bg-gray-800/60 backdrop-blur-sm">
                 <tr>
                   <th className="px-6 py-4 text-left">
                     <input
                       type="checkbox"
                       checked={selectedEntries.length === paginatedEntries.length && paginatedEntries.length > 0}
                       onChange={handleSelectAll}
-                      className="rounded border-gray-600 bg-gray-700 text-rose-500 focus:ring-rose-500 hover:scale-110 transition-transform duration-200"
+                      className="rounded border-gray-400 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-rose-500 focus:ring-rose-500 hover:scale-110 transition-transform duration-200"
                     />
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Date</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Income</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Offer</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Client</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Payment Type</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Status</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Contracted</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Gross Profit</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Setter</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Closer</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Total Commissions</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-300 hover:text-white transition-colors">Actions</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Date</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Income</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Offer</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Client</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Payment Type</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Status</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Contracted</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Gross Profit</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Setter</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Closer</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Total Commissions</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-800/50">
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-800/50">
                 {paginatedEntries.map((entry) => (
                   <tr 
                     key={entry.id} 
-                    className="hover:bg-gray-800/40 transition-all duration-300 group hover:shadow-lg hover:shadow-gray-900/20"
+                    className="hover:bg-gray-100/70 dark:hover:bg-gray-800/40 transition-all duration-300 group hover:shadow-lg hover:shadow-gray-300/30 dark:hover:shadow-gray-900/20"
                   >
                     <td className="px-6 py-5">
                       <input
                         type="checkbox"
                         checked={selectedEntries.includes(entry.id)}
                         onChange={() => handleSelectEntry(entry.id)}
-                        className="rounded border-gray-600 bg-gray-700 text-rose-500 focus:ring-rose-500 hover:scale-110 transition-transform duration-200"
+                        className="rounded border-gray-400 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-rose-500 focus:ring-rose-500 hover:scale-110 transition-transform duration-200"
                       />
                     </td>
-                    <td className="px-6 py-5 text-gray-300 group-hover:text-white transition-colors">
+                    <td className="px-6 py-5 text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                       {formatDate(entry.date)}
                     </td>
                     <td className="px-6 py-5">
