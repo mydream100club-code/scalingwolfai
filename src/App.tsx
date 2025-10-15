@@ -41,23 +41,21 @@ const AppContent: React.FC = () => {
 
   return (
     <ThemeProvider>
-      {!user ? (
-        <Router>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="*" element={<Navigate to="/login" replace />} />
-          </Routes>
-        </Router>
-      ) : (
       <AppProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white font-space-grotesk">
-          <Header />
-          <div className="flex">
-            <Sidebar />
-            <main className="flex-1 ml-16 lg:ml-64 p-6 min-h-[calc(100vh-4rem)]">
-              <Routes>
+          {!user ? (
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="*" element={<Navigate to="/login" replace />} />
+            </Routes>
+          ) : (
+            <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white font-space-grotesk">
+              <Header />
+              <div className="flex">
+                <Sidebar />
+                <main className="flex-1 ml-16 lg:ml-64 p-6 min-h-[calc(100vh-4rem)]">
+                  <Routes>
                 <Route path="/" element={<Navigate to="/dashboard" replace />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 
@@ -226,21 +224,25 @@ const AppContent: React.FC = () => {
                     gradientClass="section-gradient-finances"
                   />
                 } />
-                <Route path="/payment/history" element={
-                  <PlaceholderPage 
-                    title="Payment History" 
-                    subtitle="View payment transaction history."
-                    gradientClass="section-gradient-finances"
-                  />
-                } />
-              </Routes>
-            </main>
-          </div>
-          <Footer />
-          </div>
+                    <Route path="/payment/history" element={
+                      <PlaceholderPage
+                        title="Payment History"
+                        subtitle="View payment transaction history."
+                        gradientClass="section-gradient-finances"
+                      />
+                    } />
+
+                    {/* Auth Routes - redirect to dashboard if logged in */}
+                    <Route path="/login" element={<Navigate to="/dashboard" replace />} />
+                    <Route path="/signup" element={<Navigate to="/dashboard" replace />} />
+                  </Routes>
+                </main>
+              </div>
+              <Footer />
+            </div>
+          )}
         </Router>
       </AppProvider>
-      )}
     </ThemeProvider>
   );
 };

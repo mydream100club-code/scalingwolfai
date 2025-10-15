@@ -40,11 +40,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   // Get user role from user_metadata, default to 'user' if not set
   const role = user ? ((user.user_metadata?.role || 'user') as UserRole) : undefined;
 
-  // Debug logging
-  console.log('AuthContext - User:', user?.email);
-  console.log('AuthContext - User metadata:', user?.user_metadata);
-  console.log('AuthContext - Role:', role);
-
   useEffect(() => {
     let mounted = true;
     let timeoutId: NodeJS.Timeout;

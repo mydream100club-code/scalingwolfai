@@ -122,10 +122,6 @@ const Sidebar: React.FC = () => {
     hasPermission(item.section as any)
   );
 
-  // Debug: Log role and filtered items
-  console.log('User role:', role);
-  console.log('Filtered menu items:', filteredMenuItems.length);
-
   return (
     <>
       {/* Mobile Overlay */}
