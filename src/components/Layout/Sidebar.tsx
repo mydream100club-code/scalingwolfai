@@ -118,9 +118,13 @@ const Sidebar: React.FC = () => {
   };
 
   // Filter menu items based on permissions
-  const filteredMenuItems = menuItems.filter(item => 
+  const filteredMenuItems = menuItems.filter(item =>
     hasPermission(item.section as any)
   );
+
+  // Debug: Log role and filtered items
+  console.log('User role:', role);
+  console.log('Filtered menu items:', filteredMenuItems.length);
 
   return (
     <>
