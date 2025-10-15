@@ -8,6 +8,7 @@ export interface Permission {
   finances: boolean;
   reports: boolean;
   settings: boolean;
+  operations: boolean;
 }
 
 const ROLE_PERMISSIONS: Record<UserRole, Permission> = {
@@ -19,6 +20,7 @@ const ROLE_PERMISSIONS: Record<UserRole, Permission> = {
     finances: true,
     reports: true,
     settings: true,
+    operations: true,
   },
   closer: {
     dashboard: true,
@@ -28,6 +30,7 @@ const ROLE_PERMISSIONS: Record<UserRole, Permission> = {
     finances: false,
     reports: true,
     settings: false,
+    operations: false,
   },
   setter: {
     dashboard: true,
@@ -37,6 +40,7 @@ const ROLE_PERMISSIONS: Record<UserRole, Permission> = {
     finances: false,
     reports: true,
     settings: false,
+    operations: false,
   },
   user: {
     dashboard: true,
@@ -46,6 +50,7 @@ const ROLE_PERMISSIONS: Record<UserRole, Permission> = {
     finances: false,
     reports: false,
     settings: false,
+    operations: false,
   },
 };
 
@@ -59,6 +64,7 @@ export const getUserPermissions = (role: UserRole | undefined): Permission => {
       finances: false,
       reports: false,
       settings: false,
+      operations: false,
     };
   }
 
@@ -74,6 +80,7 @@ export const getUserPermissions = (role: UserRole | undefined): Permission => {
       finances: false,
       reports: false,
       settings: false,
+      operations: false,
     };
   }
 
