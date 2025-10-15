@@ -373,7 +373,7 @@ const SalesMetrics: React.FC = () => {
           </p>
           {/* Debug info for development */}
           {import.meta.env.DEV && (
-            <div className="mt-4 p-4 bg-gray-800/50 rounded-lg text-left">
+            <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-left">
               <p className="text-xs text-gray-500 mb-2">Debug Info:</p>
               <p className="text-xs text-gray-400">Deals loaded: {deals.length}</p>
               <p className="text-xs text-gray-400">Selected period: {selectedPeriod}</p>
@@ -441,7 +441,7 @@ const SalesMetrics: React.FC = () => {
                 px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105
                 ${selectedPeriod === period.key
                   ? 'bg-gradient-to-r from-emerald-400 to-green-600 text-white shadow-lg shadow-emerald-500/25'
-                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                  : 'bg-gray-200 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700/50 hover:text-gray-900 dark:hover:text-white'
                 }
               `}
             >

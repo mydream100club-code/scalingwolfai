@@ -474,7 +474,7 @@ const LeadsCRM: React.FC = () => {
                 placeholder="Search leads..."
                 value={filters.search}
                 onChange={(e) => handleFilterChange('search', e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400 hover:bg-gray-700/50 transition-all duration-200"
+                className="w-full pl-10 pr-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
               />
             </div>
 
@@ -482,7 +482,7 @@ const LeadsCRM: React.FC = () => {
             <select
               value={filters.status}
               onChange={(e) => handleFilterChange('status', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="">All Statuses</option>
               <option value="new">New</option>
@@ -499,7 +499,7 @@ const LeadsCRM: React.FC = () => {
             <select
               value={filters.lead_source}
               onChange={(e) => handleFilterChange('lead_source', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="">All Sources</option>
               <option value="Website">Website</option>
@@ -520,7 +520,7 @@ const LeadsCRM: React.FC = () => {
             <select
               value={filters.follow_up_completion}
               onChange={(e) => handleFilterChange('follow_up_completion', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="all">All Follow-ups</option>
               <option value="incomplete">Incomplete</option>
@@ -531,7 +531,7 @@ const LeadsCRM: React.FC = () => {
             <select
               value={filters.checklist_completion}
               onChange={(e) => handleFilterChange('checklist_completion', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="all">All Checklists</option>
               <option value="incomplete">Incomplete</option>
@@ -657,14 +657,14 @@ const LeadsCRM: React.FC = () => {
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => handleEditLead(lead)}
-                          className="text-gray-400 hover:text-teal-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-700/50"
+                          className="text-gray-500 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                           title="Edit lead"
                         >
                           <Edit className="h-4 w-4" />
                         </button>
                         <button
                           onClick={() => handleConvertToDeal(lead.id)}
-                          className="text-gray-400 hover:text-emerald-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-700/50"
+                          className="text-gray-500 dark:text-gray-400 hover:text-emerald-500 dark:hover:text-emerald-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                           title="Convert to deal"
                         >
                           <Zap className="h-4 w-4" />
@@ -709,7 +709,7 @@ const LeadsCRM: React.FC = () => {
                 <button
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
-                  className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </button>
@@ -720,7 +720,7 @@ const LeadsCRM: React.FC = () => {
                 <button
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
-                  className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                 >
                   <ChevronRight className="h-5 w-5" />
                 </button>

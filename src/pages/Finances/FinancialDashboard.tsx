@@ -237,7 +237,7 @@ const FinancialDashboard: React.FC = () => {
             <button
               onClick={handleRefresh}
               disabled={loading}
-              className="flex items-center space-x-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-200 hover:scale-105"
+              className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-all duration-200 hover:scale-105"
             >
               <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
               <span>Refresh</span>
@@ -256,7 +256,7 @@ const FinancialDashboard: React.FC = () => {
                   px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105
                   ${selectedPeriod === period.key
                     ? 'bg-gradient-to-r from-rose-400 to-amber-500 text-white shadow-lg shadow-rose-500/25'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                    : 'bg-gray-200 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700/50 hover:text-gray-900 dark:hover:text-white'
                   }
                 `}
               >

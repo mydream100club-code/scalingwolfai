@@ -477,7 +477,7 @@ const LeadMetrics: React.FC = () => {
           <button
             onClick={fetchMetrics}
             disabled={loading}
-            className="flex items-center space-x-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-200 hover:scale-105"
+            className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-all duration-200 hover:scale-105"
           >
             <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
             <span>Refresh</span>
@@ -496,7 +496,7 @@ const LeadMetrics: React.FC = () => {
                 px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105
                 ${selectedPeriod === period.key
                   ? 'bg-gradient-to-r from-teal-400 to-cyan-600 text-white shadow-lg shadow-teal-500/25'
-                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                  : 'bg-gray-200 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700/50 hover:text-gray-900 dark:hover:text-white'
                 }
               `}
             >
@@ -607,7 +607,7 @@ const LeadMetrics: React.FC = () => {
               <span className="text-sm text-gray-400">
                 vs {periods.find(p => p.key === selectedPeriod)?.previousLabel}
               </span>
-              <button className="flex items-center space-x-2 px-3 py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
+              <button className="flex items-center space-x-2 px-3 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-colors">
                 <Download className="h-4 w-4" />
                 <span>Export</span>
               </button>
@@ -648,7 +648,7 @@ const LeadMetrics: React.FC = () => {
                   <tr key={stage.key} className="hover:bg-gray-800/30 transition-colors group">
                     <td className="px-6 py-4">
                       <div className="flex items-center space-x-3">
-                        <div className={`p-2 bg-gray-800/50 rounded-lg group-hover:scale-110 transition-transform duration-200`}>
+                        <div className={`p-2 bg-gray-100 dark:bg-gray-800/50 rounded-lg group-hover:scale-110 transition-transform duration-200`}>
                           <stage.icon className={`h-5 w-5 ${stage.color}`} />
                         </div>
                         <span className="font-medium text-white group-hover:text-gray-100 transition-colors">

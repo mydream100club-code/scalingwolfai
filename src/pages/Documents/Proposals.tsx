@@ -370,7 +370,7 @@ const Proposals: React.FC = () => {
             <button
               onClick={handleRefresh}
               disabled={loading}
-              className="flex items-center space-x-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-200 hover:scale-105"
+              className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-all duration-200 hover:scale-105"
             >
               <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
               <span>Refresh</span>
@@ -648,7 +648,7 @@ const Proposals: React.FC = () => {
                               e.stopPropagation();
                               handleFollowUp(proposal.id);
                             }}
-                            className="p-1 text-gray-400 hover:text-purple-400 transition-colors rounded-full hover:bg-gray-700/50"
+                            className="p-1 text-gray-500 dark:text-gray-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors rounded-full hover:bg-gray-200 dark:hover:bg-gray-700/50"
                             title="Add follow-up"
                           >
                             <Plus className="h-4 w-4" />
@@ -663,7 +663,7 @@ const Proposals: React.FC = () => {
                                 href={proposal.proposal_link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-blue-400 hover:text-blue-300 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-700/50"
+                                className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                                 title="Open proposal link"
                                 onClick={(e) => e.stopPropagation()}
                               >
@@ -674,7 +674,7 @@ const Proposals: React.FC = () => {
                                   e.stopPropagation();
                                   navigator.clipboard.writeText(proposal.proposal_link || '');
                                 }}
-                                className="text-gray-400 hover:text-purple-400 transition-all duration-200 hover:scale-110 p-1 rounded-lg hover:bg-gray-700/50"
+                                className="text-gray-500 dark:text-gray-400 hover:text-purple-500 dark:hover:text-purple-400 transition-all duration-200 hover:scale-110 p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                                 title="Copy link"
                               >
                                 <span className="text-xs">📋</span>
@@ -689,7 +689,7 @@ const Proposals: React.FC = () => {
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => handleEditProposal(proposal)}
-                            className="text-gray-400 hover:text-purple-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-700/50"
+                            className="text-gray-500 dark:text-gray-400 hover:text-purple-500 dark:hover:text-purple-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                             title="Edit proposal"
                           >
                             <Edit className="h-4 w-4" />
@@ -701,7 +701,7 @@ const Proposals: React.FC = () => {
                                 deleteProposal(proposal.id);
                               }
                             }}
-                            className="text-gray-400 hover:text-red-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-700/50"
+                            className="text-gray-500 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                             title="Delete proposal"
                           >
                             <Trash2 className="h-4 w-4" />
@@ -770,7 +770,7 @@ const Proposals: React.FC = () => {
                     <button
                       onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                       disabled={currentPage === 1}
-                      className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                      className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                     >
                       <ChevronLeft className="h-5 w-5" />
                     </button>
@@ -781,7 +781,7 @@ const Proposals: React.FC = () => {
                     <button
                       onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                       disabled={currentPage === totalPages}
-                      className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                      className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                     >
                       <ChevronRight className="h-5 w-5" />
                     </button>

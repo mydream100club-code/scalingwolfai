@@ -370,7 +370,7 @@ const SalesCRM: React.FC = () => {
                 placeholder="Search deals..."
                 value={filters.search}
                 onChange={(e) => handleFilterChange('search', e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white placeholder-gray-400 hover:bg-gray-700/50 transition-all duration-200"
+                className="w-full pl-10 pr-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
               />
             </div>
 
@@ -378,7 +378,7 @@ const SalesCRM: React.FC = () => {
             <select
               value={filters.stage}
               onChange={(e) => handleFilterChange('stage', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="">All Stages</option>
               <option value="new_opportunity">New Opportunity</option>
@@ -399,7 +399,7 @@ const SalesCRM: React.FC = () => {
             <select
               value={filters.service_type}
               onChange={(e) => handleFilterChange('service_type', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="">All Services</option>
               <option value="Growth Creator">Growth Creator</option>
@@ -415,7 +415,7 @@ const SalesCRM: React.FC = () => {
             <select
               value={filters.value_range}
               onChange={(e) => handleFilterChange('value_range', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="all">All Values</option>
               <option value="under_10k">Under $10K</option>
@@ -428,7 +428,7 @@ const SalesCRM: React.FC = () => {
             <select
               value={filters.probability_range}
               onChange={(e) => handleFilterChange('probability_range', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="all">All Probabilities</option>
               <option value="low">Low (0-39%)</option>
@@ -557,7 +557,7 @@ const SalesCRM: React.FC = () => {
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => handleEditDeal(deal)}
-                          className="text-gray-400 hover:text-emerald-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-700/50"
+                          className="text-gray-500 dark:text-gray-400 hover:text-emerald-500 dark:hover:text-emerald-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                           title="Edit deal"
                         >
                           <Edit className="h-4 w-4" />
@@ -602,7 +602,7 @@ const SalesCRM: React.FC = () => {
                 <button
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
-                  className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </button>
@@ -613,7 +613,7 @@ const SalesCRM: React.FC = () => {
                 <button
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
-                  className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                 >
                   <ChevronRight className="h-5 w-5" />
                 </button>

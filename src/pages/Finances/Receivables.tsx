@@ -302,7 +302,7 @@ const Receivables: React.FC = () => {
             <button
               onClick={handleRefresh}
               disabled={loading}
-              className="flex items-center space-x-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-200 hover:scale-105"
+              className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-all duration-200 hover:scale-105"
             >
               <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
               <span>Refresh</span>
@@ -398,7 +398,7 @@ const Receivables: React.FC = () => {
                 placeholder="Search receivables..."
                 value={filters.search}
                 onChange={(e) => handleFilterChange('search', e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-white placeholder-gray-400 hover:bg-gray-700/50 transition-all duration-200"
+                className="w-full pl-10 pr-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
               />
             </div>
 
@@ -406,7 +406,7 @@ const Receivables: React.FC = () => {
             <select
               value={filters.status}
               onChange={(e) => handleFilterChange('status', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="">All Statuses</option>
               <option value="Paid">Paid</option>
@@ -418,7 +418,7 @@ const Receivables: React.FC = () => {
             <select
               value={filters.payment_type}
               onChange={(e) => handleFilterChange('payment_type', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="">All Payment Types</option>
               <option value="Deposit">Deposit</option>
@@ -432,7 +432,7 @@ const Receivables: React.FC = () => {
             <select
               value={filters.setter_id}
               onChange={(e) => handleFilterChange('setter_id', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="">All Setters</option>
               {users.map(user => (
@@ -446,7 +446,7 @@ const Receivables: React.FC = () => {
             <select
               value={filters.due_date_range}
               onChange={(e) => handleFilterChange('due_date_range', e.target.value)}
-              className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-white hover:bg-gray-700/50 transition-all duration-200"
+              className="px-4 py-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-all duration-200"
             >
               <option value="all">All Due Dates</option>
               <option value="overdue">Overdue</option>
@@ -480,7 +480,7 @@ const Receivables: React.FC = () => {
                     type="date"
                     value={filters.due_start_date || ''}
                     onChange={(e) => handleFilterChange('due_start_date', e.target.value)}
-                    className="w-full pl-9 pr-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-white text-sm"
+                    className="w-full pl-9 pr-3 py-2 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-gray-900 dark:text-white text-sm"
                   />
                 </div>
               </div>
@@ -493,7 +493,7 @@ const Receivables: React.FC = () => {
                     type="date"
                     value={filters.due_end_date || ''}
                     onChange={(e) => handleFilterChange('due_end_date', e.target.value)}
-                    className="w-full pl-9 pr-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-white text-sm"
+                    className="w-full pl-9 pr-3 py-2 bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent text-gray-900 dark:text-white text-sm"
                   />
                 </div>
               </div>
@@ -612,7 +612,7 @@ const Receivables: React.FC = () => {
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => handleEditEntry(entry)}
-                          className="text-gray-400 hover:text-rose-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-700/50"
+                          className="text-gray-500 dark:text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                           title="Edit receivable"
                         >
                           <Edit className="h-4 w-4" />
@@ -681,7 +681,7 @@ const Receivables: React.FC = () => {
                   <button
                     onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                     disabled={currentPage === 1}
-                    className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                    className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                   >
                     <ChevronLeft className="h-5 w-5" />
                   </button>
@@ -692,7 +692,7 @@ const Receivables: React.FC = () => {
                   <button
                     onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                     disabled={currentPage === totalPages}
-                    className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                    className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                   >
                     <ChevronRight className="h-5 w-5" />
                   </button>

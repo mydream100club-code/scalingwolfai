@@ -176,7 +176,7 @@ const LeadDetail: React.FC = () => {
         <div className="flex items-center space-x-3">
           <button
             onClick={() => setShowEditForm(true)}
-            className="flex items-center space-x-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors"
+            className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-colors"
           >
             <Edit className="h-4 w-4" />
             <span>Edit</span>

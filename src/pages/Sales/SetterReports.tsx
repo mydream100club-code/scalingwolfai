@@ -140,7 +140,7 @@ const SetterReports: React.FC = () => {
             <button
               onClick={handleRefresh}
               disabled={loading}
-              className="flex items-center space-x-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-200 hover:scale-105"
+              className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-all duration-200 hover:scale-105"
             >
               <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
               <span>Refresh</span>
@@ -269,7 +269,7 @@ const SetterReports: React.FC = () => {
                   px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105
                   ${selectedDate === period.key
                     ? 'bg-gradient-to-r from-orange-400 to-yellow-600 text-white shadow-lg shadow-orange-500/25'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                    : 'bg-gray-200 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700/50 hover:text-gray-900 dark:hover:text-white'
                   }
                 `}
               >
@@ -297,7 +297,7 @@ const SetterReports: React.FC = () => {
                 <span className="text-sm text-gray-400">
                   {reports.length} report{reports.length !== 1 ? 's' : ''}
                 </span>
-                <button className="flex items-center space-x-2 px-3 py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
+                <button className="flex items-center space-x-2 px-3 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-colors">
                   <Download className="h-4 w-4" />
                   <span>Export</span>
                 </button>
@@ -381,7 +381,7 @@ const SetterReports: React.FC = () => {
                     <td className="px-6 py-5">
                       <div className="flex items-center space-x-2">
                         <button
-                          className="text-gray-400 hover:text-orange-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-700/50"
+                          className="text-gray-500 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-200 hover:scale-110 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/50"
                           title="View details"
                         >
                           <Eye className="h-4 w-4" />
@@ -407,7 +407,7 @@ const SetterReports: React.FC = () => {
                 <button
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
-                  className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </button>
@@ -418,7 +418,7 @@ const SetterReports: React.FC = () => {
                 <button
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
-                  className="p-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-700/50 rounded-lg"
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-700/50 rounded-lg"
                 >
                   <ChevronRight className="h-5 w-5" />
                 </button>
