@@ -39,20 +39,17 @@ const AppContent: React.FC = () => {
     );
   }
 
-  if (!user) {
-    return (
-      <Router>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="*" element={<Navigate to="/login" replace />} />
-        </Routes>
-      </Router>
-    );
-  }
-
   return (
     <ThemeProvider>
+      {!user ? (
+        <Router>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="*" element={<Navigate to="/login" replace />} />
+          </Routes>
+        </Router>
+      ) : (
       <AppProvider>
         <Router>
           <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white font-space-grotesk">
@@ -243,6 +240,7 @@ const AppContent: React.FC = () => {
           </div>
         </Router>
       </AppProvider>
+      )}
     </ThemeProvider>
   );
 };
